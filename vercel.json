@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm -w run vercel-build",
-  "outputDirectory": "artifacts/dj-site/dist",
+  "buildCommand": "pnpm --filter @workspace/api-server run build",
+  "outputDirectory": "artifacts/api-server/dist",
   "framework": null
 }
