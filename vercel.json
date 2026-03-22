@@ -1,15 +1,19 @@
 {
-  "buildCommand": "pnpm -w run vercel-build",
-  "outputDirectory": "artifacts/dj-site/dist",
-  "framework": null,
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs18.x",
-      "maxDuration": 10
+  "version": 2,
+  "builds": [
+    {
+      "src": "artifacts/dj-site/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "api/index.ts",
+      "use": "@vercel/node"
     }
-  },
-  "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/index" },
-    { "source": "/((?!assets|images|favicon.svg|opengraph.jpg).*)", "destination": "/index.html" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.ts" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
