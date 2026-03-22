@@ -1,21 +1,5 @@
 {
-  "version": 2,
   "buildCommand": "pnpm -w run vercel-build",
   "outputDirectory": "artifacts/dj-site/dist",
-  "builds": [
-    {
-      "src": "artifacts/dj-site/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
-    },
-    {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/index.ts" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "framework": null
 }
