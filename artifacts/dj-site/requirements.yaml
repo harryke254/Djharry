@@ -1,0 +1,20 @@
+packages:
+  "framer-motion": "For cinematic page transitions, reveal animations, and interactive hover states"
+  "date-fns": "For formatting mixtape release dates in a human-readable format"
+  "lucide-react": "For UI icons like play, pause, volume, edit, trash, and navigation"
+
+images:
+  - path: "artifacts/dj-site/public/images/hero-bg.png"
+    description: "Dark cinematic concert crowd with dramatic laser lights, deep shadows, electric cyan and magenta atmosphere, very moody"
+    aspect_ratio: "16:9"
+  - path: "artifacts/dj-site/public/images/default-cover.png"
+    description: "Abstract vinyl record texture with neon glowing cyan and purple edges on dark background, sleek and modern"
+    aspect_ratio: "1:1"
+  - path: "artifacts/dj-site/public/images/dj-logo.png"
+    description: "Sleek modern DJ logo mark, pure white glow on transparent background, sharp geometry"
+    aspect_ratio: "1:1"
+
+notes:
+  - "The UI relies heavily on a dark aesthetic with bright electric accents."
+  - "Admin is protected by a simple hardcoded local storage check."
+  - "Audio uploads go directly to GCS using presigned URLs and XHR to show upload progress."

@@ -1,0 +1,8 @@
+{
+  "buildCommand": "pnpm -w run vercel-build",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index" },
+    { "source": "/((?!assets|images|favicon.svg|opengraph.jpg).*)", "destination": "/index.html" }
+  ]
+}
