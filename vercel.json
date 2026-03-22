@@ -1,5 +1,4 @@
 {
-  "version": 3,
   "buildCommand": "pnpm -w run vercel-build",
   "outputDirectory": "artifacts/dj-site/dist",
   "framework": null,
